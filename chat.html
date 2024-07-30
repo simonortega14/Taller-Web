@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="tallerweb.html">Inicio</a></li>
+            <li><a href="datos_biograficos.html">Datos Biográficos</a></li>
+            <li><a href="hojavida.html">Hoja de Vida</a></li>
+            <li><a href="material.html">Material de Interés</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </nav>
+
+    <div class="chat-container">
+        <h1>Chat</h1>
+        <div class="message-form">
+            <input type="text" id="sender" placeholder="Tu nombre" required>
+            <span class="error" id="senderError"></span>
+            <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
+            <span class="error" id="messageError"></span>
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+        <div class="messages" id="messages"></div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
