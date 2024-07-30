@@ -1,0 +1,163 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif; /* Fuente global */
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    background-color: red;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav li:hover {
+    background-color: khaki;
+}
+
+/* Estilo de la imagen flotante */
+.img-flotante {
+    float: left; /* Hace que la imagen flote a la izquierda */
+    margin: 0 15px 10px 0; /* Añade espacio alrededor de la imagen */
+    border: 2px solid black; /* Borde negro */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    border-radius: 10px; /* Esquina redondeada */
+    width: 300px; /* Tamaño fijo para la imagen */
+}
+
+/* Estilo del contenido */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+}
+
+/* Estilo de las secciones */
+.secciones {
+    border: 2px solid #333; /* Borde continuo */
+    border-radius: 8px; /* Bordes redondeados opcional */
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Fondo en gradiente */
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Estilo del índice */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Estilo de las viñetas en listas no numeradas */
+ul li::before {
+    content: "•"; /* Símbolo de viñeta */
+    color: #ff4500; /* Color de la viñeta */
+    font-size: 20px;
+    position: absolute;
+    left: -25px; /* Ajusta la posición de la viñeta */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilo de los números en listas numeradas */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin: 10px 0;
+}
+
+/* Cambiar el color de los números en listas numeradas */
+ol li::marker {
+    color: #1e90ff; /* Color de los números */
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Estilo de los párrafos explicativos */
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imagenes img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ADD8E6;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+}
