@@ -11,16 +11,23 @@ h1 {
     background-color: black;
     color: white;
     padding: 20px;
+    margin-top: 80px;
 }
 
 /* Estilo del menú de navegación */
-nav ul {
+nav {
     background-color: red;
     width: 100%;
+    position: fixed; /* Fija el menú en la parte superior de la página */
+    top: 0; /* Coloca el menú en la parte superior */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+nav ul {
     list-style-type: none;
-    text-align: center;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 nav li {
@@ -39,6 +46,14 @@ nav li:hover {
     background-color: khaki;
 }
 
+/* Añadir un margen superior al contenido para evitar que quede oculto detrás del menú */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 60px; /* Ajusta este valor según la altura de tu menú */
+}
+
 /* Estilo de la imagen flotante */
 .img-flotante {
     float: left; /* Hace que la imagen flote a la izquierda */
@@ -47,14 +62,6 @@ nav li:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
     border-radius: 10px; /* Esquina redondeada */
     width: 300px; /* Tamaño fijo para la imagen */
-}
-
-/* Estilo del contenido */
-.contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 60px;
 }
 
 /* Estilo de las secciones */
@@ -190,6 +197,8 @@ tr:nth-child(odd) {
     background-color: #d0f0c0; /* Fondo verde claro para filas impares */
     color: black;              /* Texto negro */
 }
+
+/* Otros estilos */
 html {
     scroll-behavior: smooth;
 }
@@ -199,29 +208,6 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-}
-
-nav ul {
-    background-color: red;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: khaki;
 }
 
 .chat-container {
@@ -292,6 +278,12 @@ h1 {
 .message .sender {
     font-weight: bold;
     color: #333;
+}
+
+.message .text {
+    color: #555;
+}
+
 }
 
 .message .text {
